@@ -1,0 +1,1 @@
+START /B "Install Python" dawn/python-3.11.1.exe InstallAllUsers=1 PrependPath=1 SimpleInstall=1 SimpleInstallDescription="If you don't want to use the this installer. Then please visit https://www.python.org/download/releases"
