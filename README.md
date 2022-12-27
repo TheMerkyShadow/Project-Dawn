@@ -1,11 +1,11 @@
 # Windows
-Run install-python-windows
+Run install-python-windows <br/>
 Run start.pyw to start the program
 
 # Linux (Debian)
-Run install-python-ubuntu
+Run install-python-ubuntu <br/>
 Run start.pyw to start the program
 
 # Mac 
-Untested. No future plans.
+Untested. No future plans. <br/>
 If so let me know!
