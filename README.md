@@ -2,7 +2,7 @@
 Run install-python-windows <br/>
 Run start.pyw to start the program
 
-# Linux (Debian)
+# Linux (Ubuntu)
 Run install-python-ubuntu <br/>
 Run start.pyw to start the program
 
