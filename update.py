@@ -20,22 +20,31 @@ from pathlib import Path
 import shutil
 import platform
  
+import os
+import sys
+
+import json
+
+from pathlib import Path
+
 class JsonConfig:
-    def __init__(self, dir='/'):
+    def __init__(self, dir='config.json'):
         self.Path = Path(dir)
-        self.Decode()
-    def Decode(self):
+        self.Read() 
+    def Read(self):
         self.Table = json.loads(self.Path.read_text())
     def Encode(self):
         return json.dumps(self.Table, indent=4)
     def __getitem__(self, item):
         return self.Table.get(item, None)
     def __setitem__(self, item, value):
-        if item in self.Table:
-            self.Table[item] = value
+        self.Table[item] = value
+    def __delitem__(self, item):
+         if item in self.Table:
+              del self.Table[item]        
     def Write(self):
         self.Path.write_text(self.Encode())
-    def __repr__(self) -> str:
+    def __repr__(self):
         return repr(self.Table)
     
 def Minecraft():
@@ -44,7 +53,7 @@ def Minecraft():
 class GitManager:
     def __init__(self, repo='TheMerkyShadow/Project-Dawn'):
         self.Repo = repo
-        self.Config = JsonConfig("manifest.json")        
+        self.Config = JsonConfig("manifest.json")
     def APIGateway(self, api):
         url = ( 'https://api.github.com/repos/' )
         url += ( self.Repo +api )
