@@ -105,7 +105,7 @@ class GitManager:
                     
                 print( status, path )
                 
-        self.Config.Decode()
+        self.Config.Read()
         self.Config["commit"] = self.New
         self.Config.Write()
         print( self.Old, "=>", self.New )
