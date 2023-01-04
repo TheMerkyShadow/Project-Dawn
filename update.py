@@ -72,7 +72,7 @@ class GitManager:
             return None
         return self.APIGateway('/compare/' + self.Old + '...' + self.New)['files']
     def Sync(self):
-        print( "Verification Started" )
+        print( "[Verification Started]" )
         diff = self.Diff()
         if diff:
             for info in diff:
@@ -109,5 +109,5 @@ class GitManager:
         self.Config["commit"] = self.New
         self.Config.Write()
         print( self.Old, "=>", self.New )
-        print( "Verification Complete" )
+        print( "[Verification Complete]" )
         return
