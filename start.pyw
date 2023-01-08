@@ -42,8 +42,7 @@ print( "Created by TheMerkyShadow!" )
 def Update():
     running = any(x.name == "DawnUpdate" for x in threading.enumerate())
     if not running:
-        thread = threading.Thread(target=( lambda : update.GitManager().Sync() ) )
-        thread.name = "DawnUpdate"
+        thread = threading.Thread(name="DawnUpdate",target=( lambda : update.GitManager().Sync() ) )
         thread.start()
     return
 
