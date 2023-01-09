@@ -20,7 +20,7 @@
       "icon" : "Furnace",
       "javaArgs" : "-Xmx16G",
 	  "lastUsed" : "2022-01-04T03:29:08.422Z",
-      "lastVersionId": "1.16.5-forge-36.2.34",
+      "lastVersionId": "1.12.2-forge-14.23.5.2860",
       "name" : "Dawn",
       "type" : "custom"
     }
