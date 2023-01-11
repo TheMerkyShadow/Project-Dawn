@@ -89,7 +89,8 @@ class GitManager:
                     elif status == "renamed":
                         previous = Path( info["previous_filename"] )
                         if previous.is_file():
-                            previous.rename(path)                        
+                            path.unlink()
+                        urlretrieve(url,path)    
                     elif status == "removed":
                         if path.is_file():    
                             path.unlink()
