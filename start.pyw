@@ -36,8 +36,11 @@ log_window.place(relx=0.50, rely=0.40, relwidth=0.95, relheight=0.75, anchor=tk.
 # This allows printing to be sent to the log window
 sys.stdout = TextWrapper(log_window)
 
-print( "Welcome To Dawn!" )
-print( "Created by TheMerkyShadow!" )
+print( "Welcome To Project Dawn! (Gold Edition)" )
+print( "Created by TheMerkyShadow! (1.30.19)")
+print( "" )
+print( "I'd personally like to thank Coolhandlukes531" )
+print( "Without his support this current modpack wouldn't be possible" )
 
 def Update():
     running = any(x.name == "DawnUpdate" for x in threading.enumerate())
